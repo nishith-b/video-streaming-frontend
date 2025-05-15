@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Video.js Player Demo</h1>
+      <video
+        width="720"
+        height="420"
+        controls
+        autoPlay
+        muted
+        preload="auto"
+        style={{ backgroundColor: "black" }}
+      >
+        <source src="http://localhost:5000/video" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
     </div>
   );
-}
+};
 
 export default App;
